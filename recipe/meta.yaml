@@ -24,7 +24,7 @@ requirements:
   run:
     - jinja2
     - python >=3.8
-    - semi-ate-project-database =={{ version }}
+    - semi-ate-project-database
 
 test:
   imports:
