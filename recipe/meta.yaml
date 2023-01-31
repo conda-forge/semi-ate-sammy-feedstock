@@ -1,5 +1,5 @@
 {% set name = "semi-ate-sammy" %}
-{% set version = "1.0.14" %}
+{% set version = "1.0.15" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/semi-ate-sammy-{{ version }}.tar.gz
-  sha256: 08eceefe2f1653645324b1598ca4b4b7067fec7febf8f73a900e86926ee68764
+  sha256: 70ed03166b8f9dbd9d745a1a2cd18d64fea6dd23f5d35b6bcc63fda1b883fa16
 
 build:
   number: 0
