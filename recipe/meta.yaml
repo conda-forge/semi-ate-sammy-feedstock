@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/semi-ate-sammy-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/semi-ate-sammy-{{ version }}.tar.gz
   sha256: 70ed03166b8f9dbd9d745a1a2cd18d64fea6dd23f5d35b6bcc63fda1b883fa16
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - sammy=ate_sammy.sammy:main
@@ -20,10 +20,10 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
   run:
     - jinja2
-    - python >=3.8
+    - python >={{ python_min }}
     - semi-ate-project-database
     - semi-ate-common
 
@@ -36,6 +36,7 @@ test:
     - sammy --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/semi-ate-sammy/
