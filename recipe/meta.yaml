@@ -1,5 +1,5 @@
 {% set name = "semi-ate-sammy" %}
-{% set version = "1.0.15" %}
+{% set version = "1.0.17" %}
 
 
 package:
@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/semi-ate-sammy-{{ version }}.tar.gz
-  sha256: 70ed03166b8f9dbd9d745a1a2cd18d64fea6dd23f5d35b6bcc63fda1b883fa16
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 02b811dc85dd1236ddf7e4f40f3e7d7aff43113397028cebd2812a547547de00
 
 build:
-  number: 1
+  number: 0
   noarch: python
   entry_points:
     - sammy=ate_sammy.sammy:main
